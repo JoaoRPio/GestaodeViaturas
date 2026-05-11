@@ -43,10 +43,45 @@ public class Viaturas {
     }
     
      public String getPlaca(){
-        return prefixo;
+        return placa;
     }
     
     public void setPlaca(String _placa){
         placa = _placa;
+    }
+     public String getModelo(){
+        return modelo;
+    }
+    
+    public void setModelo(String _modelo){
+        modelo = _modelo;
+    }
+     public Date getAnoDefabricacao(){
+        return anoDefabricacao;
+    }
+    
+    public void setAnoDefabricacao(Date _anoDefabricacao){
+        anoDefabricacao = _anoDefabricacao;
+    }
+    public String getStatus(){
+        return status;
+    }
+    
+    public void setStatus(String _status){
+        status = _status;
+    }
+    public int getQuilometragemAtual(){
+        return quilometragemAtual;
+    }
+    
+    public void setQuilometragemAtual(int _quilometragemAtual){
+        quilometragemAtual = _quilometragemAtual;
+    }
+      public String getLocalizacaoAtual(){
+        return localizacaoAtual;
+    }
+    
+    public void setLocalizacaoAtual(String _localizacaoAtual){
+        localizacaoAtual = _localizacaoAtual;
     }
 }
