@@ -5,6 +5,8 @@
 package gestaodeviaturas;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -20,6 +22,8 @@ public class Ocorrencias {
     private String status;
     private String sinistro;
     private String prioridade;
+    
+    private Set<Viaturas> participar = new HashSet<Viaturas>();
     
     public int getIndentificador(){
         return indentificador;
@@ -84,5 +88,8 @@ public class Ocorrencias {
     
     public void setPrioridade(String _prioridade){
         prioridade = _prioridade;
+    }
+    public void participar (Viaturas viaturas){
+        participar.add(viaturas);
     }
 }

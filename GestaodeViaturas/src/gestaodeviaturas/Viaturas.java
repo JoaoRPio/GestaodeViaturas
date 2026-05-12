@@ -5,6 +5,8 @@
 package gestaodeviaturas;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Viaturas {
@@ -17,6 +19,9 @@ public class Viaturas {
    private String status;
    private int quilometragemAtual;
    private String localizacaoAtual;
+   
+   private Set<Manutencoes> possui = new HashSet<Manutencoes>();
+   private Set<UsuarioSistema> realiza = new HashSet<UsuarioSistema>();
    
     public int getIndentificador(){
         return indentificador;
@@ -83,5 +88,11 @@ public class Viaturas {
     
     public void setLocalizacaoAtual(String _localizacaoAtual){
         localizacaoAtual = _localizacaoAtual;
+    }
+    public void possui (Manutencoes manutencoes){
+        possui.add(manutencoes);
+    }
+    public void realiza (UsuarioSistema usuarioSistema){
+        realiza.add(usuarioSistema);
     }
 }

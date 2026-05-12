@@ -4,6 +4,9 @@
  */
 package gestaodeviaturas;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author aluno
@@ -15,6 +18,8 @@ public class Bombeiros {
     private String patente;
     private int matricula;
     private int contato;
+    
+    private Set<Equipe> compor = new HashSet<Equipe>();
     
      public Bombeiros(){
         nome = "nobody";    
@@ -66,5 +71,8 @@ public class Bombeiros {
     
     public void setContato(int _contato){
         contato = _contato;
+    }
+    public void compor (Equipe equipe){
+        compor.add(equipe);
     }
 }

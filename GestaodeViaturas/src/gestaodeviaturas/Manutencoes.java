@@ -5,6 +5,8 @@
 package gestaodeviaturas;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -21,6 +23,8 @@ public class Manutencoes {
     private int custo;
     private int viatura;
     
+    private Set<Viaturas> fazer = new HashSet<Viaturas>();
+    private Set<Equipe> operar = new HashSet<Equipe>();
     
      public int getIndentificadorManutencao(){
         return indentificadorManutencao;
@@ -92,5 +96,11 @@ public class Manutencoes {
     
     public void setViatura(int _viatura){
        viatura = _viatura;
+    }
+    public void fazer (Viaturas viaturas){
+        fazer.add(viaturas);
+    }
+    public void operar (Equipe equipe){
+        operar.add(equipe);
     }
 }
